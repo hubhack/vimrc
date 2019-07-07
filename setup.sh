@@ -6,8 +6,8 @@ wrapper() {
   BLUE="\033[0;36m"
   NORMAL="\033[0m"
 
-  REPO_HTTPS="https://github.com/poodarchu/vimrc.git"
-  VUNDLE_HTTPS="https://github.com/VundleVim/Vundle.vim.git"
+  REPO_HTTPS="https://github.com/hubhack/vimrc"
+  VUNDLE_HTTPS="https://github.com/junegunn/vim-plug"
 
 echo "${BLUE}"
 cat << "HELLO_TEXT"
@@ -70,8 +70,8 @@ echo "${NORMAL}"
   ln -fs $VIM/vimrc ~/.vimrc
 
   if [ ! -d "$VIM/bundle/Vundle.vim" ]; then
-      printf "${BLUE}%s${NORMAL}\n" "Installing Vundle..."
-      env git clone --depth=1 $VUNDLE_HTTPS "$VIM/bundle/Vundle.vim"
+      printf "${BLUE}%s${NORMAL}\n" "Installing vim-plug..."
+      env git clone --depth=1 $VUNDLE_HTTPS "$VIM/bundle/vim-plug"
   fi
 
   if [ ! -f $VIM/colors/wombat256mod.vim ]; then
